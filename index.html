@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Food Recipe App</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+                <h2 class="title">Find Meals For Your Ingredients</h2>
+                <blockquote>Real Food doesn't have Ingredients, real food is Ingredients.<br>
+                    <cite>- Jamie Oliver</cite>
+                </blockquote>
+                <div class="meal-search-box">
+                    <input type="text" class="search-control" placeholder="Enter an Ingredient.." id="search-input">
+                    <button type="submit" class="search-btn btn" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="meal-result">
+                <h2 class="title">Your Search Results:</h2>
+                <div id="meal"></div>
+            </div>
+            <div class="meal-details">
+                <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="meal-details-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
