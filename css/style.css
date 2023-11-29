@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --tenne-tawny: #d65108;
+    --tenne-tawny-dark: #b54507;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.container {
+    min-height: 100vh;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.btn {
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.05rem;
+}
+
+.title {
+    font-size: 30px;
+    margin-bottom: 0.5rem;
+}
+
+.meal-wrapper {
+    max-width: 1280px;
+    background: #fff;
+    margin: auto;
+    text-align: center;
+}
+
+.meal-search {
+    margin: 2rem 0;
+}
+
+.meal-search cite {
+    font-size: 1rem;
+}
+
+.meal-search-box {
+    margin: 1.2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 17px;
+}
+
+.search-control {
+    width: 75%;
+}
+
+.search-control {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: none;
+    border: 1px solid var(--tenne-tawny);
+    color: var(--tenne-tawny);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.search-control::placeholder {
+    color: var(--tenne-tawny);
+}
+
+.search-control:focus::placeholder {
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    opacity: 0;
+}
+
+.search-btn {
+    width: 55px;
+    height: 55px;
+    padding: 0 10px;
+    font-size: 1.8rem;
+    background: var(--tenne-tawny);
+    color: #ffff;
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all .4s linear;
+    -webkit-transition: all .4s linear;
+}
+
+.search-btn i {
+    margin-right: 8px;
+}
+
+.search-btn:hover {
+    background: var(--tenne-tawny-dark);
+}
+
+.meal-result {
+    margin-top: 3rem;
+}
+
+#meal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 2.4rem 0;
+    gap: 20px;
+}
+
+#meal .notFound {
+    color: var(--tenne-tawny);
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.meal-item {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.8);
+}
+
+.meal-img img {
+    width: 100%;
+    display: block;
+}
+
+.meal-name {
+    padding: 1.5rem 0.5rem;
+}
+
+.meal-name h3 {
+    font-size: 1.4rem;
+}
+
+.recipe-btn {
+    text-decoration: none;
+    color: #fff;
+    background: var(--tenne-tawny);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+    display: block;
+    width: 175px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+}
+
+.recipe-btn:hover {
+    background: var(--tenne-tawny-dark);
+}
+
+.meal-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    color: #fff;
+    background-color: var(--tenne-tawny);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    width: 900px;
+    height: 600px;
+    z-index: 10;
+    overflow-y: auto;
+    display: none;
+    padding: 10px 0;
+}
+
+.meal-details::-webkit-scrollbar {
+    width: 8px;
+}
+
+.meal-details::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+.meal-details::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.575);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+.meal-details-content {
+    margin-top: 37px;
+}
+
+.recipe-close-btn {
+    position: fixed;
+    right: 7px;
+    top: 7px;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    opacity: 0.9;
+}
+
+.recipe-title {
+    letter-spacing: 1px;
+    padding-bottom: 0.5rem;
+}
+
+.recipe-category {
+    background: #fff;
+    color: var(--tenne-tawny);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+}
+
+.recipe-instruct {
+    padding: 1rem 0;
+}
+
+.recipe-instruct p {
+    width: 75%;
+    padding: 0.8rem 0.5rem;
+    margin: auto;
+    word-break: break-all;
+}
+
+.recipe-meal-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.recipe-link {
+    margin: 1.4rem 0;
+}
+
+.recipe-link a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+}
+
+.recipe-link a:hover {
+    opacity: 0.8;
+}
+
+.showRecipe {
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9;
+    display: none;
+}
+
+@media(max-width:992px) {
+    .meal-details {
+        width: 700px;
+        height: 600px;
+    }
+}
+
+@media(max-width:780px) {
+    #meal {
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    }
+    .search-control {
+        width: 100%;
+    }
+    .meal-details {
+        width: 90%;
+        height: 500px;
+    }
+    .recipe-instruct p {
+        width: 90%;
+        font-size: 16px;
+    }
+}
+
+@media(max-width:580px) {
+    .meal-search-box {
+        margin-left: 0;
+    }
+    .title {
+        font-size: 23px;
+    }
+    .meal-details {
+        height: 450px;
+    }
+    .meal-details-content h2 {
+        font-size: 18px;
+    }
+    .recipe-category {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:435px) {
+    .title {
+        font-size: 19px;
+    }
+    .meal-details {
+        width: 90%;
+        height: 375px;
+    }
+}
+
+@media(max-width:350px) {
+    .meal-search-box {
+        margin: 0.5rem 0;
+    }
+    .search-btn {
+        font-size: 1.4rem;
+    }
+    .title {
+        font-size: 16px;
+    }
+    .search-control {
+        font-size: 0.8rem;
+    }
+    blockquote {
+        font-size: 14px;
+    }
+    .search-btn {
+        height: 40px !important;
+    }
+    .meal-result {
+        margin-top: 1rem;
+    }
+    .meal-details {
+        height: 325px;
+    }
+}
