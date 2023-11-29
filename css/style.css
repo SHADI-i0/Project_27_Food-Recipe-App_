@@ -265,7 +265,7 @@ body {
 }
 
 .showRecipe {
-    display: block;
+    display: block !important;
 }
 
 .overlay {
